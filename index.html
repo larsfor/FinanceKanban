@@ -9,18 +9,26 @@
 <body>
     <div class="kanban-board">
         <form id="add-task-form">
-            <textarea type="text" id="task-name" placeholder="Task Name" required rows="10"></textarea>
+            <label for="task-date">Date:</label>
+            <input type="date" id="task-date" required>
+
+            <label for="task-participants">Participants:</label>
+            <input type="text" id="task-participants" required>
+
+            <label for="task-description">Description:</label>
+            <textarea id="task-description" placeholder="Task description" required rows="4"></textarea>
+
             <button type="submit">Add Task</button>
         </form>
         <div class="column" id="todo-column">
-            <h2>To Do</h2>
+            <h2>To Do</h2><hr />
             <!-- Tasks will be added here -->
         </div>
         <div class="column" id="in-progress">
-            <h2>In Progress</h2>
+            <h2>In Progress</h2><hr />
         </div>
         <div class="column" id="done">
-            <h2>Done</h2>
+            <h2>Done</h2><hr />
         </div>
     </div>
     <script src="script.js"></script>
